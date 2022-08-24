@@ -176,7 +176,7 @@ class _WebSocketManager:
         """
 
         # Generate expires.
-        expires = _helpers.generate_timestamp() + 1000
+        expires =  int((time.time() + 10) * 1000)
 
         # Generate signature.
         _val = f"GET/realtime{expires}"
